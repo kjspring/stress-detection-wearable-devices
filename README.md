@@ -33,12 +33,12 @@ The dataset used in this project is the WESAD (Wearable Stress and Affect Detect
 
 * **Source**: The dataset used in this project is the WESAD (Wearable Stress and Affect Detection) dataset, a publicly available dataset for wearable stress and affect detection. The dataset can be found [here](https://archive.ics.uci.edu/ml/datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29).
 * **Subjects**: The dataset contains data from 15 subjects with varying demographics, including age, gender, and handedness.
-* **Features**: The following features are included in the dataset: 'EDA_Tonic', 'EDA_Phasic', and 'SCR_Height'.
+* **Features**: Features are extracted using the neurokit2 python library
 * **Labels**: The dataset contains binary labels representing stress (1) and non-stress (0) states.
 
 ### Features
 
-The following features are extracted from the raw data:
+The following features are available from the raw data:
 
 - Chest data:
   - Accelerometer (ACC)
@@ -53,6 +53,9 @@ The following features are extracted from the raw data:
   - Electrodermal Activity (EDA)
   - Temperature (TEMP)
 
+#### Feature Selection
+* Only EDA collected from the wrist was used to train the models.
+
 ### Labels
 
 The dataset includes labels indicating the stress level of the subjects during the experiment. The labels are as follows:
@@ -65,14 +68,11 @@ The dataset includes labels indicating the stress level of the subjects during t
 The following preprocessing steps are performed on the raw data:
 
 1. Import the raw data from pickle files and store them as `SubjectData` objects using the `subject_data_import` function.
-2. Store all subject data into a list of `SubjectData` objects for easier use.
-3. Extract wrist data and store it in a list.
-4. Clean and process the raw data using the Neurokit2 library. The processing includes filtering, finding peaks, and other necessary steps to prepare the data for further analysis and model training.
+2. Extract wrist data
+3. Clean and process the raw data using the Neurokit2 library. The processing includes filtering, finding peaks, and other necessary steps to prepare the data for further analysis and model training.
 5. Selected differentiable features based on graphical analysis
 	* 'EDA_Phasic'
-6. The pickled data is saved and loaded using the `joblib` library, and Google Drive was mounted to access the data stored there.
-7. **Loading pickled data**: The pickled data was loaded using the `joblib` library, and Google Drive was mounted to access the data stored there.
-8. **Computing features**: The `compute_features` function was used to compute the mean and standard deviation of EDA over different time intervals (5 and 10 minutes) using the rolling function. This function was then applied to each dataframe in the list.
+6. **Computing features**: The `compute_features` function was used to compute the mean and standard deviation of EDA over different time intervals (5 and 10 minutes) using the rolling function. This function was then applied to each dataframe in the list.
 9. **Standardization**: The data was standardized using the `MinMaxScaler` from the `sklearn.preprocessing` library. The scaler was applied to the computed features for each subject.
 10. **Train-test split and downsampling**: The data was split into training, testing, and validation sets by subject. The dataset was then downsampled to a target frequency of 4 Hz. The train-test split was performed using a 80-20 ratio, and the remaining training data was further split into training and validation sets with a 75-25 ratio.
 11. **Data generators**: Data generators were created using the `TimeseriesGenerator` from the `tensorflow.keras.preprocessing.sequence` library. The generators were created for training, validation, and testing data with a sequence length of 5 minutes and a batch size of 64.
@@ -85,7 +85,7 @@ The following data files are used in this project:
 
 * `WESAD_model_data.pickle`: Pickle file containing the processed dataset ready for machine learning training.
 * `WESAD_labels_model.pickle`: Pickle file containing the labels for the dataset.
-
+* 
 
 ## Model Training
 
