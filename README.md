@@ -85,20 +85,81 @@ The following data files are used in this project:
 * Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
 * `WESAD_model_data.pickle`: Pickle file containing the processed dataset ready for machine learning training.
 
+To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
+
 ## Model Training
 
-(Describe the models you've experimented with, how you selected features, and any hyperparameter tuning techniques used.)
+Here's a markdown template for the "Model Training" section of your README:
 
-## Results
+---
+
+## Model Training
+
+In this project, we train several neural network models to predict stress based on various input features. Below is a brief description of each model and their respective training parameters.
+
+### Model 0: Simple Dense Model
+
+This model is a simple feed-forward neural network with two dense layers. The training parameters are as follows:
+
+- Batch size: 64
+- Learning rate: 1e-3
+- Optimizer: Adam
+- Loss function: Binary crossentropy
+- Metrics: Binary accuracy
+- Number of epochs: 200
+
+### Model 1: LSTM Model
+
+This model uses an LSTM layer followed by a dense layer. The training parameters are as follows:
+
+- Batch size: 64
+- Learning rate: 1e-3
+- Optimizer: RMSprop
+- Loss function: Binary crossentropy
+- Metrics: Binary accuracy
+- Number of epochs: 200
+
+### Model 5: Convolutional Neural Network (CNN) Model
+
+This model is a convolutional neural network with a 1D convolutional layer, a MaxPooling layer, and two dense layers. The training parameters are as follows:
+
+- Batch size: 64
+- Learning rate: 1e-3
+- Optimizer: RMSprop
+- Loss function: Binary crossentropy
+- Metrics: Binary accuracy
+- Number of epochs: 200
+
+---
+
+## Model Evaluation
+
+We evaluated the performance of each model on the training, validation, and testing datasets. The table below summarizes the accuracy scores for each model:
+
+| Model         | Training Accuracy | Validation Accuracy | Testing Accuracy |
+|---------------|-------------------|---------------------|------------------|
+| Model 0 (Dense)    | 0.85              | 0.81                | 0.80             |
+| Model 1 (LSTM)     | 0.87              | 0.83                | 0.82             |
+| Model 5 (CNN)      | 0.89              | 0.85                | 0.84             |
+
+_Note: Replace the accuracy values with the actual values obtained from your models._
+
+### Interpretation of Results
+
+Based on the accuracy scores obtained from the evaluation, we can observe that:
+
+- Model 5 (CNN) performs the best on both the validation and testing datasets, with the highest accuracy scores.
+- Model 1 (LSTM) shows a slightly lower performance than Model 5, but it still outperforms Model 0.
+- Model 0 (Dense) has the lowest accuracy scores among the three models.
+
+These results suggest that the CNN-based Model 5 is the most suitable model for predicting stress in our dataset. However, the LSTM-based Model 1 is also a viable option, with only a small difference in performance.
+
+
+
+---
 
 (Summarize the results of your experiments, including evaluation metrics and any visualizations.)
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
-
----
-
-You can modify this template to better suit your project's specific requirements. Remember to replace placeholders with the actual information related to your project.
