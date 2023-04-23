@@ -15,51 +15,14 @@ This project aims to predict stress levels using data from wearable devices, lev
 
 ## Introduction
 
-Stress prediction is important for monitoring mental health and well-being. Using wearable devices, we can gather physiological and motion data to develop models that accurately predict an individual's stress level.
+Stress prediction is important for monitoring mental health and well-being. Using wearable devices, we can gather physiological and motion data to develop models that accurately forecast an individual's stress.
+
+Add more about the negative effects of stress.
 
 In this project, we preprocess and analyze the WESAD dataset, extract relevant features, and apply machine learning and deep learning techniques to predict affective states. Our goal is to provide a useful tool for researchers, developers, and health professionals to monitor and manage stress levels in real-time.
 
-## Installation and Setup
+## File Directory
 
-To set up the project on your local machine, follow these steps:
-
-1. Clone the repository:
-
-```
-git clone https://github.com/yourusername/stress-prediction.git
-```
-
-2. Change to the project directory:
-
-```
-cd stress-prediction
-```
-
-3. (Optional) Create a virtual environment:
-
-```
-python -m venv venv
-```
-
-4. Activate the virtual environment:
-
-- On Windows:
-
-```
-venv\Scripts\activate
-```
-
-- On macOS/Linux:
-
-```
-source venv/bin/activate
-```
-
-5. Install the required packages:
-
-```
-pip install -r requirements.txt
-```
 
 ## Usage
 
