@@ -82,9 +82,8 @@ After preprocessing, the dataset is ready for model training.
 
 The following data files are used in this project:
 
+* Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
 * `WESAD_model_data.pickle`: Pickle file containing the processed dataset ready for machine learning training.
-* `WESAD_labels_model.pickle`: Pickle file containing the labels for the dataset.
-* 
 
 ## Model Training
 
