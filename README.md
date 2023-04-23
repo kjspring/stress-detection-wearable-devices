@@ -69,7 +69,7 @@ The following preprocessing steps are performed on the raw data:
 
 1. Import the raw data from pickle files and store them as `SubjectData` objects using the `subject_data_import` function.
 2. Extract wrist data
-3. Clean and process the raw data using the Neurokit2 library. The processing includes filtering, finding peaks, and other necessary steps to prepare the data for further analysis and model training.
+3. Clean and process the raw data using the [Neurokit2](https://github.com/neuropsychology/NeuroKit) library. The processing includes filtering, finding peaks, and other necessary steps to prepare the data for further analysis and model training.
 5. Selected differentiable features based on graphical analysis
 	* 'EDA_Phasic'
 6. **Computing features**: The `compute_features` function was used to compute the mean and standard deviation of EDA over different time intervals (5 and 10 minutes) using the rolling function. This function was then applied to each dataframe in the list.
