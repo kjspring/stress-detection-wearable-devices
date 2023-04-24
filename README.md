@@ -89,12 +89,6 @@ To repeat the preprocessing steps using the Jupyter Notebooks download the raw d
 
 ## Model Training
 
-Here's a markdown template for the "Model Training" section of your README:
-
----
-
-## Model Training
-
 In this project, we train several neural network models to predict stress based on various input features. Below is a brief description of each model and their respective training parameters.
 
 ### Model 0: Simple Dense Model
@@ -160,21 +154,6 @@ The LSTM model (Model 1) performed best in terms of accuracy but had low F1-scor
 4. Perform hyperparameter tuning to optimize model performance.
 5. Implement an ensemble of different models to improve overall predictions.
 
----
-
-### Interpretation of Results
-
-Based on the accuracy scores obtained from the evaluation, we can observe that:
-
-- Model 5 (CNN) performs the best on both the validation and testing datasets, with the highest accuracy scores.
-- Model 1 (LSTM) shows a slightly lower performance than Model 5, but it still outperforms Model 0.
-- Model 0 (Dense) has the lowest accuracy scores among the three models.
-
-These results suggest that the CNN-based Model 5 is the most suitable model for predicting stress in our dataset. However, the LSTM-based Model 1 is also a viable option, with only a small difference in performance.
-
----
-
-(Summarize the results of your experiments, including evaluation metrics and any visualizations.)
 
 ## License
 
