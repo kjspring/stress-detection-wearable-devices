@@ -134,15 +134,33 @@ This model is a convolutional neural network with a 1D convolutional layer, a Ma
 
 ## Model Evaluation
 
-We evaluated the performance of each model on the training, validation, and testing datasets. The table below summarizes the accuracy scores for each model:
+The following models have been tested:
 
-| Model         | Training Accuracy | Validation Accuracy | Testing Accuracy |
-|---------------|-------------------|---------------------|------------------|
-| Model 0 (Dense)    | 0.85              | 0.81                | 0.80             |
-| Model 1 (LSTM)     | 0.87              | 0.83                | 0.82             |
-| Model 5 (CNN)      | 0.89              | 0.85                | 0.84             |
+1. Model 0: Baseline Model - All predictions are class 1 (stressed)
+2. Model 1: Simple LSTM Model
+3. Model 5: LSTM with Attention Mechanism
 
-_Note: Replace the accuracy values with the actual values obtained from your models._
+The model evaluation is based on precision, accuracy, and recall scores for each model. The table below summarizes the results:
+
+| Model | Train Accuracy | Train F1-Score | Validation Accuracy | Validation F1-Score | Test Accuracy | Test F1-Score |
+|-------|----------------|----------------|---------------------|---------------------|---------------|---------------|
+| 0     | 50.46%         | 67.07%         | 11.86%              | 21.20%              | 11.30%        | 20.30%        |
+| 1     | 57.21%         | 34.98%         | 85.08%              | 8.40%               | 85.33%        | 6.97%         |
+| 5     | 58.33%         | 69.47%         | 14.17%              | 21.02%              | 13.81%        | 20.21%        |
+
+## Conclusion
+
+The LSTM model (Model 1) performed best in terms of accuracy but had low F1-scores in the validation and test sets. Further analysis and improvements are needed to enhance the model's performance.
+
+## Recommendations
+
+1. Experiment with different architectures, such as bidirectional LSTMs, GRUs, or 1D convolutional layers.
+2. Use techniques like oversampling or cost-sensitive learning to address class imbalance in the dataset.
+3. Investigate feature importance and try feature selection or engineering methods to enhance model performance.
+4. Perform hyperparameter tuning to optimize model performance.
+5. Implement an ensemble of different models to improve overall predictions.
+
+---
 
 ### Interpretation of Results
 
@@ -153,8 +171,6 @@ Based on the accuracy scores obtained from the evaluation, we can observe that:
 - Model 0 (Dense) has the lowest accuracy scores among the three models.
 
 These results suggest that the CNN-based Model 5 is the most suitable model for predicting stress in our dataset. However, the LSTM-based Model 1 is also a viable option, with only a small difference in performance.
-
-
 
 ---
 
