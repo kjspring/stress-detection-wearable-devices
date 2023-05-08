@@ -111,9 +111,9 @@ After preprocessing, the dataset is ready for model training.
 
 ## Model Evaluation
 
-Eleven different models of various architectures were tested. Model 10 is an XGBoost model and model 11 is a Random Forest model. The rest are neural networks that utilize either a fully connected neural network to a complex transformer models.
+In this project, we train several machine learning and neural network models to predict stress based on the processed input features. Model 10 is an XGBoost model and model 11 is a Random Forest model. The rest are neural networks that utilize either a fully connected neural network to a complex transformer models.
 
-In this project, we train several machine learning and neural network models to predict stress based on the processed input features. Below is a table showing the testing metrics for each model.
+Below is a table showing the testing metrics for each model.
 
 | Model  | Accuracy | Precision (Class 1) | Recall (Class 1) | F1-score (Class 1) |
 |--------|----------|---------------------|------------------|--------------------|
