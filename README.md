@@ -8,7 +8,7 @@ This project aims to predict stress levels using data from wearable devices, lev
 2. [Business Problem](#business-problem)
 3. [File Directory](#file-directory)
 4. [Data](#data)
-5. [Model Evaluation(#model-evaluation)
+5. [Model Evaluation](#model-evaluation)
 6. [Conclusions](#conclusions)
 7. [Contributing](#contributing)
 8. [License](#license)
