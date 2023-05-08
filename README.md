@@ -19,11 +19,9 @@ Stress prediction is important for monitoring mental health and well-being. Usin
 
 Stress can have detrimental effects on both mental and physical health. When individuals experience prolonged or chronic stress, it can contribute to various mental health disorders such as anxiety, depression, and burnout. Additionally, stress can become physical symptoms and lead to conditions such as cardiovascular diseases, gastrointestinal problems, weakened immune system, and impaired cognitive functioning. Furthermore, chronic stress can exacerbate existing health conditions and hinder the recovery process.
 
-Stress is a prevalent issue in society, and a significant portion of the population experiences stressful events each year. A substantial portion of the population encounters stressful events within a given year. These events can range from work-related stress, financial pressures, relationship difficulties, health concerns, and other life challenges.
-
 Recognizing the significant economic costs, high prevalence, and negative impacts on individuals, it is crucial to prioritize stress management and promote strategies that reduce stress levels.
 
-In this project, we preprocess and analyze the WESAD dataset, extract relevant features, and apply machine learning and deep learning techniques to predict affective states. Our goal is to provide a useful tool for researchers, developers, and health professionals to monitor and manage stress levels in real-time.
+In this project, we preprocess and analyze the WESAD dataset, extract relevant features, and apply machine learning and deep learning techniques to predict affective states. Our goal is to provide a useful models and identify important features for designers and developers of our wearable device technology to monitor and manage stress levels in real-time.
 
 ## Business Problem
 HealthOn is focused on improving the health of users through the development of wearable devices. The goal is to collect and analyze physiological data in real time to provide insights and interventions to improve users health. 
