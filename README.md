@@ -92,58 +92,22 @@ To repeat the preprocessing steps using the Jupyter Notebooks download the raw d
 
 ## Model Training
 
-In this project, we train several neural network models to predict stress based on various input features. Below is a brief description of each model and their respective training parameters.
+In this project, we train several machine learning and neural network models to predict stress based on the processed input features. Below is a table showing the testing metrics for each model.
 
-### Model 0: Simple Dense Model
-
-This model is a simple feed-forward neural network with two dense layers. The training parameters are as follows:
-
-- Batch size: 64
-- Learning rate: 1e-3
-- Optimizer: Adam
-- Loss function: Binary crossentropy
-- Metrics: Binary accuracy
-- Number of epochs: 200
-
-### Model 1: LSTM Model
-
-This model uses an LSTM layer followed by a dense layer. The training parameters are as follows:
-
-- Batch size: 64
-- Learning rate: 1e-3
-- Optimizer: RMSprop
-- Loss function: Binary crossentropy
-- Metrics: Binary accuracy
-- Number of epochs: 200
-
-### Model 5: Convolutional Neural Network (CNN) Model
-
-This model is a convolutional neural network with a 1D convolutional layer, a MaxPooling layer, and two dense layers. The training parameters are as follows:
-
-- Batch size: 64
-- Learning rate: 1e-3
-- Optimizer: RMSprop
-- Loss function: Binary crossentropy
-- Metrics: Binary accuracy
-- Number of epochs: 200
-
----
-
-## Model Evaluation
-
-The following models have been tested:
-
-1. Model 0: Baseline Model - All predictions are class 1 (stressed)
-2. Model 1: Simple LSTM Model
-3. Model 5: LSTM with Attention Mechanism
-
-The model evaluation is based on precision, accuracy, and recall scores for each model. The table below summarizes the results:
-
-| Model | Train Accuracy | Train F1-Score | Validation Accuracy | Validation F1-Score | Test Accuracy | Test F1-Score |
-|-------|----------------|----------------|---------------------|---------------------|---------------|---------------|
-| 0     | 50.46%         | 67.07%         | 11.86%              | 21.20%              | 11.30%        | 20.30%        |
-| 1     | 57.21%         | 34.98%         | 85.08%              | 8.40%               | 85.33%        | 6.97%         |
-| 5     | 58.33%         | 69.47%         | 14.17%              | 21.02%              | 13.81%        | 20.21%        |
+| Model  | Accuracy | Precision (Class 1) | Recall (Class 1) | F1-score (Class 1) |
+|--------|----------|---------------------|------------------|--------------------|
+| Model 0|   0.905  |         0.661           |        0.554            |       0.603          |
+| Model 1|   0.829  |         0.402           |        0.642            |       0.494          |
+| Model 2|   0.790  |         0.343           |        0.676            |       0.455          |
+| Model 3|   0.647  |         0.130           |        0.303            |       0.182          |
+| Model 4|   0.870  |         0.000           |        0.000            |       0.000          |
+| Model 5|   0.870  |         0.000           |        0.000            |       0.000          |
+| Model 6|   0.846  |         0.073           |        0.016            |       0.026          |
+| Model 7|   0.130  |         0.130           |        1.000            |       0.230          |
+| Model 8|   0.870  |         0.000           |        0.000            |       0.000          |
+| Model 9|   0.870  |         0.000           |        0.000            |       0.000          |
+| Model 10|   0.910 |         0.630           |        0.670            |       0.650          |
+| Model 11|   0.840 |         0.420           |        0.700            |       0.530          |       |
 
 ## Conclusion
 
