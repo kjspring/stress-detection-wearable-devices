@@ -58,6 +58,16 @@ The dataset used in this project is the WESAD (Wearable Stress and Affect Detect
 * **Features**: Features are extracted using the neurokit2 python library
 * **Labels**: The processed dataset contains binary labels representing stress (1) and non-stress (0) states.
 
+#### Data Files
+
+The following data files are used in this project:
+
+* Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
+* 
+* [`WESAD_model_data.pickle`](https://drive.google.com/file/d/1KuIc5ypFB30McV7tl3ziwQndEIjvtgBJ/view?usp=share_link): Pickle file containing the processed dataset ready for machine learning training.
+
+To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
+
 ### Features
 
 The following features are available from the raw data:
@@ -103,15 +113,6 @@ The following preprocessing steps are performed on the raw data:
 8. **Data generators**: Data generators were created using the `TimeseriesGenerator` from the `tensorflow.keras.preprocessing.sequence` library. The generators were created for training, validation, and testing data with a sequence length of 5 minutes and a batch size of 64.
 
 After preprocessing, the dataset is ready for model training.
-
-### Files
-
-The following data files are used in this project:
-
-* Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
-* `WESAD_model_data.pickle`: Pickle file containing the processed dataset ready for machine learning training.
-
-To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
 
 ## Model Training
 
