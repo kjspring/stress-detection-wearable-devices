@@ -15,7 +15,7 @@ This project aims to predict stress levels using data from wearable devices, lev
 
 ## Introduction
 
-Stress prediction is important for monitoring mental health and well-being. Using wearable devices, we can gather physiological and motion data to develop models that accurately forecast an individual's stress.
+Stress prediction is important for monitoring mental health and well-being. Using wearable devices, we can gather physiological data to develop models that accurately forecast an individual's stress.
 
 Stress can have detrimental effects on both mental and physical health. When individuals experience prolonged or chronic stress, it can contribute to various mental health disorders such as anxiety, depression, and burnout. Additionally, stress can become physical symptoms and lead to conditions such as cardiovascular diseases, gastrointestinal problems, weakened immune system, and impaired cognitive functioning. Furthermore, chronic stress can exacerbate existing health conditions and hinder the recovery process.
 
@@ -49,6 +49,13 @@ This project aims to assess the feasability of using physiological data to forec
 
 The dataset used in this project is the WESAD (Wearable Stress and Affect Detection) dataset, which is a multimodal dataset for the detection of stress using wearable physiological and motion sensors. The dataset includes data collected from various sensors placed on the subjects' chest and wrist, providing valuable information on Electrodermal Activity (EDA), Respiration (RSP), Heart Rate Variability (HRV), and other physiological signals. This section provides an overview of the dataset used for this  project. The description includes the dataset's features, labels, preprocessing steps, and the methods used to prepare the data for machine learning training.
 
+The following data files are used in this project:
+
+* Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
+* [WESAD_model_data.pickle](https://drive.google.com/file/d/1KuIc5ypFB30McV7tl3ziwQndEIjvtgBJ/view?usp=share_link): Pickle file containing the processed dataset ready for machine learning training.
+
+To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
+
 ### Raw dataset
 
 * **Source**: The dataset used in this project is the [WESAD (Wearable Stress and Affect Detection) dataset](https://archive.ics.uci.edu/ml/datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29), a publicly available dataset for wearable stress and affect detection.
@@ -56,13 +63,12 @@ The dataset used in this project is the WESAD (Wearable Stress and Affect Detect
 * **Features**: Features are extracted using the neurokit2 python library
 * **Labels**: The processed dataset contains binary labels representing stress (1) and non-stress (0) states.
 
-The following data files are used in this project:
+### Labels
 
-* Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
-* 
-* [WESAD_model_data.pickle](https://drive.google.com/file/d/1KuIc5ypFB30McV7tl3ziwQndEIjvtgBJ/view?usp=share_link): Pickle file containing the processed dataset ready for machine learning training.
+The dataset includes labels indicating the stress level of the subjects during the experiment. The labels are as follows:
 
-To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
+- 0: No stress
+- 1: Stress
 
 ### Features
 
@@ -88,24 +94,16 @@ The following features are available from the raw data:
 
 * Statistical Feature Extraction: In addition to physiological features, statistical features from the processed data was extracted. This step involved calculating statistical measures such as the median and standard deviation over 1 and 5 minute intervals. These statistical features help capture the distribution and variability of the data, providing further insights into the individual's physiological profile.
 
-### Labels
-
-The dataset includes labels indicating the stress level of the subjects during the experiment. The labels are as follows:
-
-- 0: No stress
-- 1: Stress
-
 ### Preprocessing
 
 The following preprocessing steps are performed on the raw data:
 
 1. Import the raw data from pickle files and store them as `SubjectData` objects using the `subject_data_import` function.
-2. Extract wrist data
-3. Clean and process the raw data using the [Neurokit2](https://github.com/neuropsychology/NeuroKit) library. The processing includes filtering, finding peaks, and other necessary steps to prepare the data for further analysis and model training.
-5. Selected differentiable features based on graphical analysis
-6. **Standardization**: The data was standardized using the `MinMaxScaler` from the `sklearn.preprocessing` library. The scaler was applied to the computed features for each subject.
-7. **Train-test split and downsampling**: The data was split into training, testing, and validation sets by subject. The dataset was then downsampled to a target frequency of 4 Hz. The train-test split was performed using a 80-20 ratio, and the remaining training data was further split into training and validation sets with a 75-25 ratio.
-8. **Data generators**: Data generators were created using the `TimeseriesGenerator` from the `tensorflow.keras.preprocessing.sequence` library. The generators were created for training, validation, and testing data with a sequence length of 5 minutes.
+2. Clean and process the raw data using the [Neurokit2](https://github.com/neuropsychology/NeuroKit) library. The processing includes filtering, finding peaks, and other necessary steps to prepare the data for further analysis and model training.
+3. Selected differentiable features based on graphical analysis
+4. **Standardization**: The data was standardized using the `MinMaxScaler` from the `sklearn.preprocessing` library. The scaler was applied to the computed features for each subject.
+5. **Train-test split and downsampling**: The data was split into training, testing, and validation sets by subject. The dataset was then downsampled to a target frequency of 4 Hz. The train-test split was performed using a 80-20 ratio, and the remaining training data was further split into training and validation sets with a 75-25 ratio.
+6. **Data generators**: Data generators were created using the `TimeseriesGenerator` from the `tensorflow.keras.preprocessing.sequence` library. The generators were created for training, validation, and testing data with a sequence length of 5 minutes.
 
 After preprocessing, the dataset is ready for model training.
 
@@ -152,7 +150,7 @@ For example, if we look at Model 10's F1-score for stress (class 1), it is 0.65,
 
 Additionally, the performance of these models may be attributed to the limited dataset used for training. Both models were trained on a specific dataset (WESAD dataset) with a limited number of subjects and potentially limited variability in stressful conditions. To build more robust and accurate stress prediction models, a larger and more diverse dataset is necessary. This would involve collecting data from a broader range of individuals, encompassing various stress-inducing situations and conditions.
 
-To gather more data, our next generation of wearable devices should be equipped with appropriate sensors to measure physiological parameters like respiration rate, electrodermal activity (EDA), heart rate, and body temperature. These sensors can provide a more comprehensive and reliable set of inputs for stress prediction models. The user can indicate on the device if they are experiencing stress and that data can be used for further training. Also the device can predict if a user is in stress or will be in stress and ask for the user's feedback on their stressful state.By incorporating additional features with high causal relationships to stress, the models can potentially improve in their ability to accurately forecast stress.
+To gather more data, our next generation of wearable devices should be equipped with appropriate sensors to measure physiological parameters like respiration rate, electrodermal activity (EDA), heart rate, and body temperature. These sensors can provide a more comprehensive and reliable set of inputs for stress prediction models. The user can indicate on the device if they are experiencing stress and that data can be used for further training. Also the device can predict if a user is in stress or will be in stress and ask for the user's feedback on their stressful state. By incorporating additional features with high causal relationships to stress, the models can potentially improve in their ability to accurately forecast stress.
 
 In summary, while the results from Model 10 and Model 0 indicate the feasibility of stress prediction, their limited performance and the need for a larger dataset suggest that they are not appropriate for deployment in production. Expanding the dataset and developing devices with suitable sensors would be crucial steps in enhancing the accuracy and reliability of stress prediction models.
 
