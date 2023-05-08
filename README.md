@@ -112,6 +112,8 @@ After preprocessing, the dataset is ready for model training.
 
 ## Model Evaluation
 
+[!Baseline Neural Network Architecture](img/model_o_arch.png)
+
 In this project, we train several machine learning and neural network models to predict stress based on the processed input features. Below is a table showing the testing metrics for each model.
 
 | Model  | Accuracy | Precision (Class 1) | Recall (Class 1) | F1-score (Class 1) |
