@@ -17,14 +17,33 @@ This project aims to predict stress levels using data from wearable devices, lev
 
 Stress prediction is important for monitoring mental health and well-being. Using wearable devices, we can gather physiological and motion data to develop models that accurately forecast an individual's stress.
 
-Add more about the negative effects of stress.
+Stress can have detrimental effects on both mental and physical health. When individuals experience prolonged or chronic stress, it can contribute to various mental health disorders such as anxiety, depression, and burnout. Additionally, stress can become physical symptoms and lead to conditions such as cardiovascular diseases, gastrointestinal problems, weakened immune system, and impaired cognitive functioning. Furthermore, chronic stress can exacerbate existing health conditions and hinder the recovery process.
+
+Stress is a prevalent issue in society, and a significant portion of the population experiences stressful events each year. A substantial portion of the population encounters stressful events within a given year. These events can range from work-related stress, financial pressures, relationship difficulties, health concerns, and other life challenges.
+
+Recognizing the significant economic costs, high prevalence, and negative impacts on individuals, it is crucial to prioritize stress management and promote strategies that reduce stress levels.
 
 In this project, we preprocess and analyze the WESAD dataset, extract relevant features, and apply machine learning and deep learning techniques to predict affective states. Our goal is to provide a useful tool for researchers, developers, and health professionals to monitor and manage stress levels in real-time.
 
+## Business Problem
+HealthOn is focused on improving the health of users through the development of wearable devices. The goal is to collect and analyze physiological data in real time to provide insights and interventions to improve users health. 
+
+Stress is a significant health related burden for individuals. It can lead to mental and somatic health issues. Changes in the body are correlated when a person is going into a stressful situation, for example, they will sweat more and their heart rate will increase.
+
+We want to forecast if a user will be in a stressful state in the immediate future. Our device will then notify the user with recommendations to mitigate the stess.
+
+### Project Objective
+
+This project aims to assess the feasability of using physiological data to forecast a subject going into stress. It also aims to identify the most import features in detecting stress for the aim of improving wearable device development and design.
+
+### Stakeholders
+- Project Manager
+- Business executives
+
 ## File Directory
 * [/deliverables](../deliverables)
-* [img](../img)
-* [notebooks](../notebooks)
+* [/img](../img)
+* [/notebooks](../notebooks)
     * data_load_process.ipynb: Load and preprocess raw data
     * modeling_WESAD_all_subjects.ipynb: Process data and model
 
@@ -57,7 +76,11 @@ The following features are available from the raw data:
   - Temperature (TEMP)
 
 #### Feature Selection
-* Only EDA collected from the wrist was used to train the models.
+* Data Preparation: Used the NeuroKit library to preprocess and clean the physiological data. The bio_process() function in NeuroKit allows the  automated processing of different signals, such as heart beat (ECG), respiration (RSP), electrodermal activity (EDA), and electromyography (EMG). This step involved removing noise, filtering the signals, and extracting relevant features.
+
+* Physiological Feature Extraction: With Neurokit various physiological features from the preprocessed data was extracted. Obtained features such as heart rate, R peaks indexes, respiration rate, amplitude, tonic and phasic components of EDA. These features provide valuable insights into the individual's physiological state.
+
+* Statistical Feature Extraction: In addition to physiological features, statistical features from the processed data was extracted. This step involved calculating statistical measures such as the median and standard deviation over 1 and 5 minute intervals. These statistical features help capture the distribution and variability of the data, providing further insights into the individual's physiological profile.
 
 ### Labels
 
