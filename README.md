@@ -64,7 +64,7 @@ The following data files are used in this project:
 
 * Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
 * 
-* [`WESAD_model_data.pickle`](https://drive.google.com/file/d/1KuIc5ypFB30McV7tl3ziwQndEIjvtgBJ/view?usp=share_link): Pickle file containing the processed dataset ready for machine learning training.
+* [WESAD_model_data.pickle](https://drive.google.com/file/d/1KuIc5ypFB30McV7tl3ziwQndEIjvtgBJ/view?usp=share_link): Pickle file containing the processed dataset ready for machine learning training.
 
 To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
 
