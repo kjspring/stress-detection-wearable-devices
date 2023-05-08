@@ -112,7 +112,9 @@ After preprocessing, the dataset is ready for model training.
 
 ## Model Evaluation
 
-[!Baseline Neural Network Architecture](img/model_o_arch.png)
+Eleven different models of various architectures were tested. Model 10 is an XGBoost model and model 11 is a Random Forest model. The rest are neural networks that utilize either a fully connected neural network to a complex transformer models. The image below is the architecture of the baseline neural network model.
+
+[!Baseline Neural Network Architecture](img/model_0_arch.png)
 
 In this project, we train several machine learning and neural network models to predict stress based on the processed input features. Below is a table showing the testing metrics for each model.
 
