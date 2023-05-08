@@ -22,11 +22,11 @@ Add more about the negative effects of stress.
 In this project, we preprocess and analyze the WESAD dataset, extract relevant features, and apply machine learning and deep learning techniques to predict affective states. Our goal is to provide a useful tool for researchers, developers, and health professionals to monitor and manage stress levels in real-time.
 
 ## File Directory
+* [/deliverables](../deliverables)
 * [img](../img)
-* [notebooks]
+* [notebooks](../notebooks)
     * data_load_process.ipynb: Load and preprocess raw data
     * modeling_WESAD_all_subjects.ipynb: Process data and model
-
 
 ## Data Information
 
