@@ -5,11 +5,11 @@ This project aims to predict stress levels using data from wearable devices, lev
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Installation and Setup](#installation-and-setup)
-3. [Usage](#usage)
-4. [Dataset](#dataset)
-5. [Model Training](#model-training)
-6. [Results](#results)
+2. [Business Problem](#business-problem)
+3. [File Directory](#file-directory)
+4. [Data](#data)
+5. [Model Evaluation(#model-evaluation)
+6. [Conclusions](#conclusions)
 7. [Contributing](#contributing)
 8. [License](#license)
 
@@ -47,18 +47,16 @@ This project aims to assess the feasability of using physiological data to forec
     * data_load_process.ipynb: Load and preprocess raw data
     * modeling_WESAD_all_subjects.ipynb: Process data and model
 
-## Data Information
+## Data
 
 The dataset used in this project is the WESAD (Wearable Stress and Affect Detection) dataset, which is a multimodal dataset for the detection of stress using wearable physiological and motion sensors. The dataset includes data collected from various sensors placed on the subjects' chest and wrist, providing valuable information on Electrodermal Activity (EDA), Respiration (RSP), Heart Rate Variability (HRV), and other physiological signals. This section provides an overview of the dataset used for this  project. The description includes the dataset's features, labels, preprocessing steps, and the methods used to prepare the data for machine learning training.
 
-### Dataset
+### Raw dataset
 
 * **Source**: The dataset used in this project is the [WESAD (Wearable Stress and Affect Detection) dataset](https://archive.ics.uci.edu/ml/datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29), a publicly available dataset for wearable stress and affect detection.
 * **Subjects**: The dataset contains data from 15 subjects with varying demographics, including age, gender, and handedness.
 * **Features**: Features are extracted using the neurokit2 python library
 * **Labels**: The processed dataset contains binary labels representing stress (1) and non-stress (0) states.
-
-#### Data Files
 
 The following data files are used in this project:
 
@@ -114,7 +112,7 @@ The following preprocessing steps are performed on the raw data:
 
 After preprocessing, the dataset is ready for model training.
 
-## Model Training
+## Model Evaluation
 
 In this project, we train several machine learning and neural network models to predict stress based on the processed input features. Below is a table showing the testing metrics for each model.
 
