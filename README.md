@@ -114,20 +114,30 @@ In this project, we train several machine learning and neural network models to 
 
 Below is a table showing the testing metrics for each model.
 
-| Model  | Accuracy | Precision (Class 1) | Recall (Class 1) | F1-score (Class 1) |
-|--------|----------|---------------------|------------------|--------------------|
-| Model 0|   0.905  |         0.661           |        0.554            |       0.603          |
-| Model 1|   0.829  |         0.402           |        0.642            |       0.494          |
-| Model 2|   0.790  |         0.343           |        0.676            |       0.455          |
-| Model 3|   0.647  |         0.130           |        0.303            |       0.182          |
-| Model 4|   0.870  |         0.000           |        0.000            |       0.000          |
-| Model 5|   0.870  |         0.000           |        0.000            |       0.000          |
-| Model 6|   0.846  |         0.073           |        0.016            |       0.026          |
-| Model 7|   0.130  |         0.130           |        1.000            |       0.230          |
-| Model 8|   0.870  |         0.000           |        0.000            |       0.000          |
-| Model 9|   0.870  |         0.000           |        0.000            |       0.000          |
-| Model 10|   0.910 |         0.630           |        0.670            |       0.650          |
-| Model 11|   0.840 |         0.420           |        0.700            |       0.530          |       |
+| Model    | Recall   | F1-Score |
+|----------|----------|----------|
+| Model 0  | 0.978463 | 0.498193 |
+| Model 1  | 0.989232 | 0.502549 |
+| Model 2  | 0.988253 | 0.512762 |
+| Model 3  | 0.686735 | 0.318610 |
+| Model 4  | 0.000000 | 0.000000 |
+| Model 5  | 0.000000 | 0.000000 |
+| Model 6  | 0.670093 | 0.442755 |
+| Model 7  | 1.000000 | 0.248495 |
+| Model 8  | 0.000000 | 0.000000 |
+| Model 9  | 0.000000 | 0.000000 |
+| Model 10  | 0.760646 | 0.701897 |
+| Model 11  | 0.739109 | 0.629429 |
+
+The table below indicates the top-5 most important features according to Model 10, an XGBoost Classifier.
+
+|   |          Feature          |
+|---|--------------------------|
+| 1 | EDA_Phasic_std_300s      |
+| 2 | ECG_Rate_mean_300s       |
+| 3 | ECG_Rate_mean_60s        |
+| 4 | Temp_mean_300s           |
+| 5 | RSP_Rate_mean_300s       |
 
 ## Conclusion
 
