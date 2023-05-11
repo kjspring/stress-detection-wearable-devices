@@ -40,12 +40,6 @@ This project aims to assess the feasability of using physiological data to forec
 - Business executives
 - Design team
 
-## File Directory
-* [/deliverables](../deliverables)
-* [/img](../img)
-* [/notebooks](../notebooks)
-    * notebook.ipynb
-
 ## Data
 
 The dataset used in this project is the WESAD (Wearable Stress and Affect Detection) dataset, which is a multimodal dataset for the detection of stress using wearable physiological and motion sensors. The dataset includes data collected from various sensors placed on the subjects' chest and wrist, providing valuable information on Electrodermal Activity (EDA), Respiration (RSP), Heart Rate Variability (HRV), and other physiological signals. This section provides an overview of the dataset used for this  project. The description includes the dataset's features, labels, preprocessing steps, and the methods used to prepare the data for machine learning training.
@@ -166,6 +160,12 @@ In summary, while the results from Model 10 and Model 0 indicate the feasibility
 3. Focus on Stressful Conditions: To specifically address stress forecasting, it is important to prioritize data collection during high-stress situations or events. This can be achieved by designing studies or collecting data from individuals undergoing stressful experiences, such as work-related stress, performance anxiety, or challenging life events. This targeted data collection will help train the models to better identify and predict stress states accurately.
 
 4. Continuous Model Improvement: As stress forecasting is a complex task, it is essential to continuously refine and enhance the machine learning models. Regularly analyze the performance of the models, identify areas for improvement, and iterate on the algorithms and techniques used. As more data becomes available and the models evolve, periodically reassess their performance and implement necessary updates.
+
+## File Directory
+* [/deliverables](../deliverables)
+* [/img](../img)
+* [/notebooks](../notebooks)
+    * notebook.ipynb
 
 ## License
 
