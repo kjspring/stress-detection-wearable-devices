@@ -112,13 +112,13 @@ Below is a table showing the testing metrics for each model.
 | Model 0:Dense  | 0.978463 | 0.498193 |
 | Model 1: Simple LSTM  | 0.989232 | 0.502549 |
 | Model 2: Deep LSTM  | 0.988253 | 0.512762 |
-| Model 3  | 0.686735 | 0.318610 |
-| Model 4  | 0.000000 | 0.000000 |
-| Model 5: Simple Transformer  | 0.000000 | 0.000000 |
+| Model 3: LSTM Batch Normalization  | 0.686735 | 0.318610 |
+| Model 4: CNN + LSTM  | 0.000000 | 0.000000 |
+| Model 5: Transformer + LSTM  | 0.000000 | 0.000000 |
 | Model 6: Bidirectional LSTM  | 0.670093 | 0.442755 |
-| Model 7  | 1.000000 | 0.248495 |
-| Model 8  | 0.000000 | 0.000000 |
-| Model 9  | 0.000000 | 0.000000 |
+| Model 7: Transformer + Deep LSTM  | 1.000000 | 0.248495 |
+| Model 8: Transfomer + Deep LSTM 2  | 0.000000 | 0.000000 |
+| Model 9: [TS-Transformer](https://arxiv.org/abs/2103.13790)  | 0.000000 | 0.000000 |
 | Model 10: XGBoost  | 0.760646 | 0.701897 |
 | Model 11: Random Forest  | 0.739109 | 0.629429 |
 
@@ -165,7 +165,6 @@ In summary, while the results from Model 10 and Model 0 indicate the feasibility
 * [/deliverables](../deliverables)
 * [/img](../img)
 * [/notebooks](../notebooks)
-    * notebook.ipynb
 
 ## License
 
