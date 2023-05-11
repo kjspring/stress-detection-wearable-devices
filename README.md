@@ -10,10 +10,10 @@ Introducing HealthOn, a cutting-edge wearable device that goes beyond fitness tr
 
 1. [Introduction](#introduction)
 2. [Business Problem](#business-problem)
-3. [File Directory](#file-directory)
-4. [Data](#data)
-5. [Model Evaluation](#model-evaluation)
-6. [Conclusions](#conclusions)
+3. [Data](#data)
+4. [Model Evaluation](#model-evaluation)
+5. [Conclusions](#conclusions)
+6. [File Directory](#file-directory)
 7. [License](#license)
 
 ## Introduction
