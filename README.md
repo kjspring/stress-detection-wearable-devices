@@ -38,13 +38,13 @@ This project aims to assess the feasability of using physiological data to forec
 ### Stakeholders
 - Project Manager
 - Business executives
+- Design team
 
 ## File Directory
 * [/deliverables](../deliverables)
 * [/img](../img)
 * [/notebooks](../notebooks)
-    * data_load_process.ipynb: Load and preprocess raw data
-    * modeling_WESAD_all_subjects.ipynb: Process data and model
+    * notebook.ipynb
 
 ## Data
 
@@ -53,7 +53,6 @@ The dataset used in this project is the WESAD (Wearable Stress and Affect Detect
 The following data files are used in this project:
 
 * Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
-* [WESAD_model_data.pickle](https://drive.google.com/file/d/1KuIc5ypFB30McV7tl3ziwQndEIjvtgBJ/view?usp=share_link): Pickle file containing the processed dataset ready for machine learning training.
 
 To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
 
@@ -116,52 +115,46 @@ Below is a table showing the testing metrics for each model.
 
 | Model    | Recall   | F1-Score |
 |----------|----------|----------|
-| Model 0  | 0.978463 | 0.498193 |
-| Model 1  | 0.989232 | 0.502549 |
-| Model 2  | 0.988253 | 0.512762 |
+| Model 0:Dense  | 0.978463 | 0.498193 |
+| Model 1: Simple LSTM  | 0.989232 | 0.502549 |
+| Model 2: Deep LSTM  | 0.988253 | 0.512762 |
 | Model 3  | 0.686735 | 0.318610 |
 | Model 4  | 0.000000 | 0.000000 |
-| Model 5  | 0.000000 | 0.000000 |
-| Model 6  | 0.670093 | 0.442755 |
+| Model 5: Simple Transformer  | 0.000000 | 0.000000 |
+| Model 6: Bidirectional LSTM  | 0.670093 | 0.442755 |
 | Model 7  | 1.000000 | 0.248495 |
 | Model 8  | 0.000000 | 0.000000 |
 | Model 9  | 0.000000 | 0.000000 |
-| Model 10  | 0.760646 | 0.701897 |
-| Model 11  | 0.739109 | 0.629429 |
+| Model 10: XGBoost  | 0.760646 | 0.701897 |
+| Model 11: Random Forest  | 0.739109 | 0.629429 |
 
 The table below indicates the top-5 most important features according to Model 10, an XGBoost Classifier.
 
 |   |          Feature          |
 |---|--------------------------|
-| 1 | EDA_Phasic_std_300s      |
-| 2 | ECG_Rate_mean_300s       |
-| 3 | ECG_Rate_mean_60s        |
-| 4 | Temp_mean_300s           |
-| 5 | RSP_Rate_mean_300s       |
+| 1 | ECG Rate mean 300s      |
+| 2 | EDA Phasic std 300s       |
+| 3 | ECG Rate mean 60s        |
+| 4 | ECG Rate std 300s       |
+| 5 | EDA Phasic std 60s     |
 
 ## Conclusion
 
 Physiological data, such as heart rate, electrodermal activity (EDA), body temperature, and respiration rate, can provide valuable insights into the emotional and physical state of a person. These physiological parameters are influenced by the autonomic nervous system, which regulates the body's response to various stimuli and can reflect changes in emotional arousal, stress levels, and physical well-being.
 
-* Heart Rate: Heart rate is the number of times the heart beats per minute and is influenced by factors such as physical exertion, stress, and emotional arousal. Higher heart rate can indicate increased physiological arousal, which may be associated with emotions like excitement, anxiety, or fear. Changes in heart rate variability (HRV), the variation in time intervals between heartbeats, can also provide information about emotional regulation and stress levels.
+* Heart Rate: Heart rate is the number of times the heart beats per minute.
 
-* Electrodermal Activity (EDA): EDA measures the electrical conductance of the skin, which is influenced by sweat gland activity. EDA is commonly used as an indicator of sympathetic nervous system activity, which is associated with emotional arousal and stress. Increased EDA may reflect heightened emotional responses, such as excitement, fear, or anxiety.
+* Electrodermal Activity (EDA): EDA measures the electrical conductance of the skin, which is influenced by sweat gland activity. EDA is commonly used as an indicator of sympathetic nervous system activity, which is associated with emotional arousal and stress.
 
-* Body Temperature: Body temperature can fluctuate based on environmental conditions, physical activity, and emotional states. Increased body temperature may occur during periods of physical exertion, stress, or emotional arousal. Conversely, decreased body temperature may indicate relaxation or a lower emotional state.
+* Body Temperature: Body temperature can fluctuate based on environmental conditions, physical activity, and emotional states.
 
-* Respiration Rate: Respiration rate refers to the number of breaths taken per minute. Emotional and physical states can impact respiration patterns. For instance, during states of stress or anxiety, respiration rate may increase, leading to rapid and shallow breathing. In contrast, during calm or relaxed states, respiration rate tends to be slower and deeper.
+* Respiration Rate: Respiration rate refers to the number of breaths taken per minute. Emotional and physical states can impact respiration patterns.
 
 Machine learning algorithms and statistical techniques can be applied to these data to develop models that predict emotional states, stress levels, or physical conditions, such as stress forecasting.
 
-Based on the F1-score for the stress case, the best models to forecast if a person will be in a stressful state in the next 5 minutes is with model 10, the baseline model 0, and model 11.
+Based on the F1-score for the stress case, the best model to forecast if a person will be in a stressful state in the next 5 minutes is with model 11 using a Random Forest Classifier. The performance of this model is not suitable to put into production. This may be attributed to the limited dataset used for training. To build more robust and accurate stress prediction models, a larger and more diverse dataset is necessary. This would involve collecting data from a broader range of individuals, encompassing various stress-inducing situations and conditions.
 
-Model 10 (XGBoost) and Model 0 (fully connected neural network) are considered to be only slightly better than guessing because their performance metrics, such as accuracy, precision, recall, and F1-score, are not significantly higher than random chance. In the context of stress prediction, these models exhibit limited predictive power and may not provide reliable or accurate forecasts.
-
-For example, if we look at Model 10's F1-score for stress (class 1), it is 0.65, indicating that the model can correctly identify only 65% of the stressed instances in the dataset. Similarly, Model 0's F1-score for stress is 0.60, which means it can correctly identify 60% of the stressed instances. These scores suggest that the models are not performing significantly better than randomly assigning labels, which is not suitable for reliable stress prediction.
-
-Additionally, the performance of these models may be attributed to the limited dataset used for training. Both models were trained on a specific dataset (WESAD dataset) with a limited number of subjects and potentially limited variability in stressful conditions. To build more robust and accurate stress prediction models, a larger and more diverse dataset is necessary. This would involve collecting data from a broader range of individuals, encompassing various stress-inducing situations and conditions.
-
-To gather more data, our next generation of wearable devices should be equipped with appropriate sensors to measure physiological parameters like respiration rate, electrodermal activity (EDA), heart rate, and body temperature. These sensors can provide a more comprehensive and reliable set of inputs for stress prediction models. The user can indicate on the device if they are experiencing stress and that data can be used for further training. Also the device can predict if a user is in stress or will be in stress and ask for the user's feedback on their stressful state. By incorporating additional features with high causal relationships to stress, the models can potentially improve in their ability to accurately forecast stress.
+To gather more data, our next generation of wearable devices should be equipped with appropriate sensors to measure physiological features identfied as important features in model 11, such as like respiration rate, electrodermal activity (EDA), heart rate, and body temperature. These sensors can provide a more comprehensive and reliable set of inputs for stress prediction models. The user can indicate on the device if they are experiencing stress and that data can be used for further training. Also the device can predict if a user is in stress or will be in stress and ask for the user's feedback on their stressful state. By incorporating additional features with high causal relationships to stress, the models can potentially improve in their ability to accurately forecast stress.
 
 In summary, while the results from Model 10 and Model 0 indicate the feasibility of stress prediction, their limited performance and the need for a larger dataset suggest that they are not appropriate for deployment in production. Expanding the dataset and developing devices with suitable sensors would be crucial steps in enhancing the accuracy and reliability of stress prediction models.
 
