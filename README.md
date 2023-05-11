@@ -122,15 +122,9 @@ Below is a table showing the testing metrics for each model.
 | Model 10: XGBoost  | 0.760646 | 0.701897 |
 | Model 11: Random Forest  | 0.739109 | 0.629429 |
 
-The table below indicates the top-5 most important features according to Model 10, an XGBoost Classifier.
+The figure below displays the features importance according to Model 11, an Random Forest Classifier.
 
-|   |          Feature          |
-|---|--------------------------|
-| 1 | ECG Rate mean 300s      |
-| 2 | EDA Phasic std 300s       |
-| 3 | ECG Rate mean 60s        |
-| 4 | ECG Rate std 300s       |
-| 5 | EDA Phasic std 60s     |
+![Model 11 Feature Importance](img/plots/model11_feature_importance.png)
 
 ## Conclusion
 
