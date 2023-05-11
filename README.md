@@ -166,9 +166,9 @@ In summary, while the results from Model 10 and Model 0 indicate the feasibility
 4. Continuous Model Improvement: As stress forecasting is a complex task, it is essential to continuously refine and enhance the machine learning models. Regularly analyze the performance of the models, identify areas for improvement, and iterate on the algorithms and techniques used. As more data becomes available and the models evolve, periodically reassess their performance and implement necessary updates.
 
 ## File Directory
-* [/deliverables](../deliverables)
-* [/img](../img)
-* [/notebooks](../notebooks)
+* [/deliverables](deliverables/)
+* [/img](img/)
+* [/notebooks](notebooks/)
 
 ## License
 
