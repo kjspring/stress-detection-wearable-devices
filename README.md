@@ -46,7 +46,7 @@ The dataset used in this project is the WESAD (Wearable Stress and Affect Detect
 
 The following data files are used in this project:
 
-* Raw Data: [WESAD.zip](https://drive.google.com/file/d/1q0WNZGxjuCOfEXhBeZcBbBtno8GI_sYA/view?usp=sharing)
+* Raw Data: [WESAD.zip](https://archive.ics.uci.edu/ml/datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29)
 
 To repeat the preprocessing steps using the Jupyter Notebooks download the raw data file to your working directory.
 
