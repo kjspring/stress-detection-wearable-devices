@@ -1,6 +1,6 @@
 # Stress Prediction using Wearable Device Data
 
-* Author: [Kevin Spring](https://kevinspring.com)
+* Author: [Kevin Spring](https://kjspring.github.io/)
 
 Introducing HealthOn, a cutting-edge wearable device that goes beyond fitness tracking to revolutionize your well-being. Our advanced sensors capture crucial physiological data such as heart rate, electrodermal activity, body temperature, and respiration rate. Leveraging the power of machine learning and data analysis, we forecast stress levels in real-time, empowering you to take proactive steps towards better mental and physical health. Our intelligent algorithms analyze the collected data, providing valuable insights into your emotional and physical states. With HealthOn, you can gain a deeper understanding of how stress impacts your life and make informed decisions to lead a happier and healthier lifestyle. Join us on this transformative journey towards improved well-being.
 
