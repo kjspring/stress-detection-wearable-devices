@@ -111,7 +111,9 @@ After preprocessing, the dataset is ready for model training.
 
 ## Model Evaluation
 
-In this project, we train several machine learning and neural network models to predict stress based on the processed input features. Model 10 is an XGBoost model and model 11 is a Random Forest model. The rest are neural networks that utilize either a fully connected neural network to a complex transformer models.
+In this project, we train several machine learning and neural network models to predict stress based on the processed input features. The model with the best metrics of recall and F1-score is model 11, a Random Forest classifier.
+
+![Model 11 Confusion Matrix](img/plots/model_11_confusion_matrix.png)
 
 Below is a table showing the testing metrics for each model.
 
