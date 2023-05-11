@@ -59,7 +59,7 @@ To repeat the preprocessing steps using the Jupyter Notebooks download the raw d
 
 Raw EDA signal of the first subject. The dotted-red line indicates when stress is induced on the subject.
 
-![Phasic EDA chart](img/plots/raw_EDA_with signal.png)
+![Raw Phasic EDA chart](img/plots/raw_EDA_with_signal.png)
 
 ### Labels
 
