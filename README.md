@@ -86,7 +86,7 @@ The following features are available from the raw data:
 
 * Physiological Feature Extraction: With Neurokit various physiological features from the preprocessed data was extracted. Obtained features such as heart rate, R peaks indexes, respiration rate, amplitude, tonic and phasic components of EDA. These features provide valuable insights into the individual's physiological state. The image below shows the phasic signal extracted from the raw data of the first subject. The dotted red line indicates when the stress is put on the subject.
 
-![Phasic EDA chart](EDA_phasic_w_signal.png)
+![Phasic EDA chart](img/EDA_phasic_w_signal.png)
 
 * Statistical Feature Extraction: In addition to physiological features, statistical features from the processed data was extracted. This step involved calculating statistical measures such as the median and standard deviation over 1 and 5 minute intervals. These statistical features help capture the distribution and variability of the data, providing further insights into the individual's physiological profile.
 
