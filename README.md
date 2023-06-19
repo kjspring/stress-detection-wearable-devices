@@ -60,8 +60,7 @@ To repeat the preprocessing steps using the Jupyter Notebooks download the raw d
 * **Labels**: The processed dataset contains binary labels representing stress (1) and non-stress (0) states.
 
 Raw EDA signal of the first subject. The dotted-red line indicates when stress is induced on the subject.
-
-![Raw Phasic EDA chart](img/plots/raw_EDA_with_signal.png)
+![Raw EDA chart](img/plots/EDA_phasic_w_signal.png)
 
 ### Labels
 
@@ -91,8 +90,6 @@ The following features are available from the raw data:
 * Data Preparation: Used the NeuroKit library to preprocess and clean the physiological data. The bio_process() function in NeuroKit allows the  automated processing of different signals, such as heart beat (ECG), respiration (RSP), electrodermal activity (EDA), and electromyography (EMG). This step involved removing noise, filtering the signals, and extracting relevant features.
 
 * Physiological Feature Extraction: With Neurokit various physiological features from the preprocessed data was extracted. Obtained features such as heart rate, R peaks indexes, respiration rate, amplitude, tonic and phasic components of EDA. These features provide valuable insights into the individual's physiological state. The image below shows the phasic signal extracted from the raw data of the first subject. The dotted red line indicates when the stress is put on the subject.
-
-![Raw EDA chart](img/plots/EDA_phasic_w_signal.png)
 
 * Statistical Feature Extraction: In addition to physiological features, statistical features from the processed data was extracted. This step involved calculating statistical measures such as the median and standard deviation over 1 and 5 minute intervals. These statistical features help capture the distribution and variability of the data, providing further insights into the individual's physiological profile.
 
